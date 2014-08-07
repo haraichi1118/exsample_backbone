@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Backbone Example</title>
+  <style>
+  	.completed {
+  		text-decoration: line-through;
+  		color: gray;
+  	}
+  </style>
+</head>
+<body>
+
+	<h1>Tasks</h1>
+
+	<form id="addTask">
+		<input type="text" id="title">
+		<input type="submit" value="add">
+		<span id="error"></span>
+	</form>
+
+	<div id="tasks">
+	</div>
+
+	<p>Tasks left: <span id="count"></span></p>
+
+	<script type="text/template" id="task-template">
+		<input type="checkbox" class="toggle" <%= completed ? ' checked': '' %> >
+		<span class="<%= completed ? 'completed' : '' %>"><%- title %></span>
+		<span class="delete">[×]</span>
+	</script>
+	<script src="lib/js/jquery-1.9.1.js"></script>
+	<script src="lib/js/json2.js"></script>
+	<script src="lib/js/underscore.js"></script>
+	<script src="lib/js/backbone.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
