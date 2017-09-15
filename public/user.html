@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Backbone Example</title>
+  <style>
+  </style>
+</head>
+<body>
+	<div class="main">
+		<h1>users</h1>
+
+		<form id="addUser">
+			<input type="text" id="name" placeholder="name">
+			<input type="text" id="age" placeholder="age">
+ 			<button type="button" class="register" name="add">add</button>
+			<span id="error"></span>
+		</form>
+
+		<div id="userList">
+		</div>
+
+		<script type="text/template" id="user-template">
+			<span id="number"><%- number %></span>
+			<span id="name"><%- name %></span>
+			<span id="age"><%- age %></span>
+			<button type="button" class="delete" name="del">[×]</button>
+		</script>
+		<script src="lib/js/jquery-1.9.1.js"></script>
+		<script src="lib/js/json2.js"></script>
+		<script src="lib/js/underscore.js"></script>
+		<script src="lib/js/backbone.js"></script>
+		<script src="js/view/view.js"></script>
+		<br>
+	</div>
+</body>
+</html>
